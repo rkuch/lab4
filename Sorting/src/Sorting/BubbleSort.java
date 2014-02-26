@@ -8,7 +8,20 @@ public class BubbleSort {
 	 */
 	public static int[] bubbleSort(int[] unsortedArray) {
 		//TODO: S1 implements bubble sort
-		
-		return null;
+		if (unsortedArray == null) return null;
+        boolean bubbled = false;
+        int len = unsortedArray.length;
+        do {
+            bubbled = false;
+            for (int i=1; i<len; i++) {
+                if (unsortedArray[i] < unsortedArray[i-1]) {
+                    int temp = array[i];
+                    array[i] = array[i-1];
+                    array[i-1] = i;
+                    bubbled = true;
+                }
+            }
+        } while (bubbled);
+        return unsortedArray;
 	}
 }

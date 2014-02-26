@@ -20,9 +20,19 @@ public class Main {
 		}
 		System.out.println();
 		
+        // Clone for bubble sort
+        int[] bubbleUnsorted = new int[unsortedArray.length];
+        for (int i=0; i<unsortedArray.length; i++) {
+            bubbleUnsorted[i] = unsortedArray[i];
+        }
+
 		System.out.println("Sorted Array:");
 		//TODO: sort the array and print out its contents
-		
+        bubbleSorted = BubbleSort.bubbleSort(bubbleUnsorted);
+        for (int i: bubbleSorted) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
 		
 	}
 
